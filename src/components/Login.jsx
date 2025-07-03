@@ -10,16 +10,14 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(''); // Reset error message
-    
+
     if (!username.trim()) {
       setError('Username is required');
       return;
     }
 
     try {
-      // Call the onLogin prop function
-      
-      // Only navigate if onLogin succeeds
+
       localStorage.setItem('username', username);
       navigate('/dashboard');
     } catch (err) {
@@ -29,7 +27,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-400 to-blue-400 p-4">
-      <motion.div 
+      <motion.div
         className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -66,7 +64,7 @@ const Login = () => {
               <p className="mt-1 text-sm text-red-500">{error}</p>
             )}
           </motion.div>
-          
+
           <motion.button
             type="submit"
             className="w-full bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-lg shadow-lg transition-all duration-300"

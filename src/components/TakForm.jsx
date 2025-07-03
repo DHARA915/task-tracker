@@ -33,26 +33,23 @@ const TaskForm = ({ darkMode }) => {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className={`rounded-xl p-6 space-y-4 ${
-        darkMode 
-          ? 'bg-gray-700 text-amber-100' 
+      className={`rounded-xl p-6 space-y-4 ${darkMode
+          ? 'bg-gray-700 text-amber-100'
           : 'bg-white text-gray-900'
-      } shadow-lg`}
+        } shadow-lg`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <h3 className={`text-lg font-medium ${
-        darkMode ? 'text-amber-100' : 'text-gray-900'
-      }`}>
+      <h3 className={`text-lg font-medium ${darkMode ? 'text-amber-100' : 'text-gray-900'
+        }`}>
         Add New Task
       </h3>
 
       {/* Title Field */}
       <div>
-        <label className={`block text-sm font-medium mb-1 ${
-          darkMode ? 'text-amber-100' : 'text-gray-700'
-        }`}>
+        <label className={`block text-sm font-medium mb-1 ${darkMode ? 'text-amber-100' : 'text-gray-700'
+          }`}>
           Title <span className="text-red-500">*</span>
         </label>
         <input
@@ -61,19 +58,17 @@ const TaskForm = ({ darkMode }) => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Task title (required)"
           required
-          className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
-            darkMode
+          className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${darkMode
               ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
               : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
-          } border transition-all duration-200`}
+            } border transition-all duration-200`}
         />
       </div>
 
       {/* Description Field */}
       <div>
-        <label className={`block text-sm font-medium mb-1 ${
-          darkMode ? 'text-amber-100' : 'text-gray-700'
-        }`}>
+        <label className={`block text-sm font-medium mb-1 ${darkMode ? 'text-amber-100' : 'text-gray-700'
+          }`}>
           Description
         </label>
         <textarea
@@ -81,11 +76,10 @@ const TaskForm = ({ darkMode }) => {
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Task description (optional)"
           rows={3}
-           className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
-            darkMode
+          className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${darkMode
               ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
               : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
-          } border transition-all duration-200`}
+            } border transition-all duration-200`}
         />
       </div>
 
@@ -93,20 +87,18 @@ const TaskForm = ({ darkMode }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Priority Field */}
         <div>
-          <label className={`flex items-center text-sm font-medium mb-1 ${
-            darkMode ? 'text-amber-100' : 'text-gray-700'
-          }`}>
+          <label className={`flex items-center text-sm font-medium mb-1 ${darkMode ? 'text-amber-100' : 'text-gray-700'
+            }`}>
             <FlagIcon className="w-4 h-4 mr-1" />
             Priority
           </label>
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
-              darkMode
+            className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${darkMode
                 ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
                 : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
-            } border transition-all duration-200`}
+              } border transition-all duration-200`}
           >
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -116,9 +108,8 @@ const TaskForm = ({ darkMode }) => {
 
         {/* Due Date Field */}
         <div>
-          <label className={`flex items-center text-sm font-medium mb-1 ${
-            darkMode ? 'text-amber-100' : 'text-gray-700'
-          }`}>
+          <label className={`flex items-center text-sm font-medium mb-1 ${darkMode ? 'text-amber-100' : 'text-gray-700'
+            }`}>
             <CalendarIcon className="w-4 h-4 mr-1" />
             Due Date
           </label>
@@ -126,19 +117,17 @@ const TaskForm = ({ darkMode }) => {
             type="date"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
-              darkMode
+            className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${darkMode
                 ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
                 : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
-            } border transition-all duration-200`}
+              } border transition-all duration-200`}
           />
         </div>
 
         {/* Category Field */}
         <div>
-          <label className={`flex items-center text-sm font-medium mb-1 ${
-            darkMode ? 'text-amber-100' : 'text-gray-700'
-          }`}>
+          <label className={`flex items-center text-sm font-medium mb-1 ${darkMode ? 'text-amber-100' : 'text-gray-700'
+            }`}>
             <TagIcon className="w-4 h-4 mr-1" />
             Category
           </label>
@@ -147,11 +136,10 @@ const TaskForm = ({ darkMode }) => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             placeholder="General"
-            className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
-              darkMode
+            className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${darkMode
                 ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
                 : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
-            } border transition-all duration-200`}
+              } border transition-all duration-200`}
           />
         </div>
       </div>

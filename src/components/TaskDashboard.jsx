@@ -14,8 +14,8 @@ const TaskDashboard = () => {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode
-        ? 'bg-gradient-to-br from-gray-900 to-gray-800 text-amber-100'
-        : 'bg-gradient-to-br from-amber-50 to-green-50 text-gray-900'
+      ? 'bg-gradient-to-br from-gray-900 to-gray-800 text-amber-100'
+      : 'bg-gradient-to-br from-amber-50 to-green-50 text-gray-900'
       }`}>
       <header className={`transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'
         } shadow-sm`}>
@@ -30,8 +30,8 @@ const TaskDashboard = () => {
                 localStorage.removeItem('username');
                 window.location.href = '/'; // Redirect to login page
               }}
-              
-           >
+
+            >
               Logout
             </motion.button>
 

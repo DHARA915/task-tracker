@@ -79,7 +79,7 @@ const TaskItem = ({ task, darkMode }) => {
             className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
               darkMode
                 ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
-                : 'bg-white border-gray-300 focus:ring-amber-400 text-gray-900'
+                : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
             } border transition-all duration-200`}
           />
           
@@ -89,7 +89,7 @@ const TaskItem = ({ task, darkMode }) => {
             className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
               darkMode
                 ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
-                : 'bg-white border-gray-300 focus:ring-amber-400 text-gray-900'
+                : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
             } border transition-all duration-200`}
             rows={3}
           />
@@ -100,7 +100,7 @@ const TaskItem = ({ task, darkMode }) => {
             className={`w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 ${
               darkMode
                 ? 'bg-gray-600 border-gray-500 focus:ring-indigo-400 text-white'
-                : 'bg-white border-gray-300 focus:ring-amber-400 text-gray-900'
+                : 'bg-white border-gray-300 focus:ring-blue-400 text-gray-900'
             } border transition-all duration-200`}
           >
             <option value="low">Low</option>
