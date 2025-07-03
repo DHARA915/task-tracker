@@ -180,10 +180,7 @@ const TaskList = ({ darkMode }) => {
                   <div className="flex space-x-2">
                     <motion.button
                       onClick={() => saveEdit(task.id)}
-                      className={`px-3 py-1 rounded transition-all duration-300 ${darkMode
-                          ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
-                          : 'bg-amber-500 hover:bg-amber-600 text-white'
-                        }`}
+                      className={`px-3 py-1 rounded transition-all duration-300 bg-gradient-to-br from-pink-500 to-blue-600 text-white`}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
