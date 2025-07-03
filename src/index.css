@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Custom dark mode transitions */
+:root {
+  color-scheme: light dark;
+  --scrollbar-thumb-light: #fbbf24; /* amber-400 */
+  --scrollbar-thumb-dark: #4f46e5; /* indigo-600 */
+}
+
+html {
+  transition: background-color 300ms, color 300ms;
+}
+
+/* Custom scrollbar - now using CSS variables */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme(colors.gray.100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-light);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme(colors.amber.500);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: theme(colors.gray.800);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-dark);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme(colors.indigo.500);
+  }
+}
